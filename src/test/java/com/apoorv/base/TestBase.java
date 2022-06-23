@@ -4,9 +4,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.core.config.Loggers;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -18,7 +21,7 @@ public class TestBase {
 	/*
 	 * WebDriver
 	 * Properties
-	 * Logs
+	 * Logs- log4j jar, .logs (application and selenium), log4j property
 	 * Extent reports
 	 * DB
 	 * Excel
@@ -32,6 +35,7 @@ public class TestBase {
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
+	
 	
 	@BeforeSuite
 	public void setUp() {
@@ -61,7 +65,7 @@ public class TestBase {
 			}
 			
 			
-			//choosing my browser
+			//choosing browser
 			if(config.getProperty("browser").equals("chrome")){
 				System.setProperty("webdriver.chrome.driver", ".//src/test/resources/executables/chromedriver.exe");
 				driver = new ChromeDriver();
@@ -82,9 +86,20 @@ public class TestBase {
 			
 		}
 	}
+	
+	public Boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		}catch(NoSuchElementException e) {
+			return false;
+		}
+	}
+	
 	@AfterSuite
-	public void TearDown() {
+	public void TearDown() throws InterruptedException {
 		if(driver!=null) {
+			Thread.sleep(3000);
 			driver.quit();
 		}
 	}
