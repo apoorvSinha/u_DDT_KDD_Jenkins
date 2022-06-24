@@ -14,8 +14,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import com.apoorv.utilities.ExcelReader;
 
 public class TestBase {
 	/*
@@ -35,7 +38,8 @@ public class TestBase {
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
-	
+	public static ExcelReader excel ;
+	public static WebDriverWait wait;
 	
 	@BeforeSuite
 	public void setUp() {
@@ -83,7 +87,7 @@ public class TestBase {
 			driver.get(config.getProperty("testsiteurl"));
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
-			
+			wait = new WebDriverWait(driver, 5);
 		}
 	}
 	

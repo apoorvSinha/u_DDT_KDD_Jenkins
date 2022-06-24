@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Data_driver_farmework" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Data_driver_farmework">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Data_driver_farmework" title="com.apoorv.testcases.LoginTest" class="method navigator-link" hash-for-method="loginAsBankManager">loginAsBankManager</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Data_driver_farmework" title="com.apoorv.testcases.AddCustomerTest" class="method navigator-link" hash-for-method="addCustomer(Raman, Aruna, A234d, Customer added successfully)">addCustomer(Raman, Aruna, A234d, Customer added successfully)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Data_driver_farmework" title="com.apoorv.testcases.BankManagerLoginTest" class="method navigator-link" hash-for-method="loginAsBankManager">loginAsBankManager</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Data_driver_farmework -->
@@ -120,7 +125,7 @@
           <div class="suite-Data_driver_farmework-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.apoorv.testcases.LoginTest</span>
+              <span class="class-name">com.apoorv.testcases.BankManagerLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,6 +133,22 @@
                   <a name="loginAsBankManager">
                   </a> <!-- loginAsBankManager -->
                   <span class="method-name">loginAsBankManager</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Data_driver_farmework-class-passed -->
+          <div class="suite-Data_driver_farmework-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.apoorv.testcases.AddCustomerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addCustomer(Raman, Aruna, A234d, Customer added successfully)">
+                  </a> <!-- addCustomer(Raman, Aruna, A234d, Customer added successfully) -->
+                  <span class="method-name">addCustomer</span>
+                  <span class="parameters">(Raman, Aruna, A234d, Customer added successfully)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,11 +163,20 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Data driver farmework&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Login test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.apoorv.testcases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.apoorv.testcases.BankManagerLoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Add customer test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.apoorv.testcases.AddCustomerTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Add customer test --&gt;
 &lt;/suite&gt; &lt;!-- Data driver farmework --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,6 +189,9 @@
             <ul>
               <li>
                 <span class="test-name">Login test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Add customer test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +217,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginAsBankManager')
-data.setCell(0, 2, 'com.apoorv.testcases.LoginTest')
-data.setCell(0, 3, 178);
+data.setCell(0, 1, 'addCustomer')
+data.setCell(0, 2, 'com.apoorv.testcases.AddCustomerTest')
+data.setCell(0, 3, 394);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginAsBankManager')
+data.setCell(1, 2, 'com.apoorv.testcases.BankManagerLoginTest')
+data.setCell(1, 3, 165);
 window.suiteTableData['Data_driver_farmework']= { tableData: data, tableDiv: 'times-div-Data_driver_farmework'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 178 ms</span>
+              <span class="suite-total-time">Total running time: 559 ms</span>
               <div id="times-div-Data_driver_farmework">
               </div> <!-- times-div-Data_driver_farmework -->
             </div> <!-- times-div -->
@@ -204,6 +241,19 @@ return data;
             <span class="header-content">Reporter output for Data driver farmework</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">loginAsBankManager</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Login successfully executed</span>
+                <span class="reporter-method-output"><a target="blank" href="C:\Users\apoorv\eclipse-workspace\u_DDT_KDD_Jenkins\src\test\resources\pics\shv.jpg"><img src="C:\Users\apoorv\eclipse-workspace\u_DDT_KDD_Jenkins\src\test\resources\pics\shv.jpg" height=200 width =200></a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">addCustomer(Raman, Aruna, A234d, Customer added successfully)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Customer addedd successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Data_driver_farmework" class="panel">
@@ -219,18 +269,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.apoorv.testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.apoorv.testcases.AddCustomerTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.apoorv.testcases.BankManagerLoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginAsBankManager</span>
-                <span class="method-start">2148 ms</span>
+                <span class="method-start">1786 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.apoorv.testcases.AddCustomerTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addCustomer(Raman, Aruna, A234d, Customer added successfully)</span>
+                <span class="method-start">2424 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">2374 ms</span>
+                <span class="method-start">2826 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Login successfully executed]]>
+    </line>
+    <line>
+      <![CDATA[<a target="blank" href="C:\Users\apoorv\eclipse-workspace\u_DDT_KDD_Jenkins\src\test\resources\pics\shv.jpg"><img src="C:\Users\apoorv\eclipse-workspace\u_DDT_KDD_Jenkins\src\test\resources\pics\shv.jpg" height=200 width =200></a>]]>
+    </line>
+    <line>
+      <![CDATA[Customer addedd successfully]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-06-23T12:29:40Z" name="Data driver farmework" finished-at="2022-06-23T12:29:40Z" duration-ms="202">
+  <suite started-at="2022-06-24T05:51:03Z" name="Data driver farmework" finished-at="2022-06-24T05:51:04Z" duration-ms="1066">
     <groups>
     </groups>
-    <test started-at="2022-06-23T12:29:40Z" name="Login test" finished-at="2022-06-23T12:29:40Z" duration-ms="202">
-      <class name="com.apoorv.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.LoginTest@268f106e]" started-at="2022-06-23T12:29:37Z" name="setUp" finished-at="2022-06-23T12:29:40Z" duration-ms="2126" status="PASS">
+    <test started-at="2022-06-24T05:51:03Z" name="Login test" finished-at="2022-06-24T05:51:03Z" duration-ms="200">
+      <class name="com.apoorv.testcases.BankManagerLoginTest">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@2ad48653]" started-at="2022-06-24T05:51:03Z" name="loginAsBankManager" finished-at="2022-06-24T05:51:03Z" duration-ms="165" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successfully executed]]>
+            </line>
+            <line>
+              <![CDATA[<a target="blank" href="C:\Users\apoorv\eclipse-workspace\u_DDT_KDD_Jenkins\src\test\resources\pics\shv.jpg"><img src="C:\Users\apoorv\eclipse-workspace\u_DDT_KDD_Jenkins\src\test\resources\pics\shv.jpg" height=200 width =200></a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginAsBankManager -->
+      </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
+    </test> <!-- Login test -->
+    <test started-at="2022-06-24T05:51:03Z" name="Add customer test" finished-at="2022-06-24T05:51:04Z" duration-ms="837">
+      <class name="com.apoorv.testcases.AddCustomerTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@1cf56a1c]" started-at="2022-06-24T05:51:01Z" name="setUp" finished-at="2022-06-24T05:51:03Z" duration-ms="1753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.LoginTest@268f106e]" started-at="2022-06-23T12:29:40Z" name="loginAsBankManager" finished-at="2022-06-23T12:29:40Z" duration-ms="178" status="PASS">
+        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@1cf56a1c]" started-at="2022-06-24T05:51:04Z" name="addCustomer" data-provider="getData" finished-at="2022-06-24T05:51:04Z" duration-ms="394" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Raman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aruna]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[A234d]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Customer added successfully]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[Customer addedd successfully]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- loginAsBankManager -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.LoginTest@268f106e]" started-at="2022-06-23T12:29:40Z" name="TearDown" finished-at="2022-06-23T12:29:43Z" duration-ms="3271" status="PASS">
+        </test-method> <!-- addCustomer -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@1cf56a1c]" started-at="2022-06-24T05:51:04Z" name="TearDown" finished-at="2022-06-24T05:51:07Z" duration-ms="3189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.apoorv.testcases.LoginTest -->
-    </test> <!-- Login test -->
+      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
+    </test> <!-- Add customer test -->
   </suite> <!-- Data driver farmework -->
 </testng-results>
