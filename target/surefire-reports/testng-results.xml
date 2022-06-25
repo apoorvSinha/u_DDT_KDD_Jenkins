@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Login successfully executed]]>
+    </line>
+    <line>
+      <![CDATA[Customer addedd successfully]]>
+    </line>
+    <line>
+      <![CDATA[Login successfully executed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-06-24T13:35:57Z" name="Data driver farmework" finished-at="2022-06-24T13:35:58Z" duration-ms="1422">
+    <groups>
+    </groups>
+    <test started-at="2022-06-24T13:35:57Z" name="Login test" finished-at="2022-06-24T13:35:57Z" duration-ms="242">
+      <class name="com.apoorv.testcases.BankManagerLoginTest">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@75437611]" started-at="2022-06-24T13:35:57Z" name="loginAsBankManager" finished-at="2022-06-24T13:35:57Z" duration-ms="217" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successfully executed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginAsBankManager -->
+      </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
+    </test> <!-- Login test -->
+    <test started-at="2022-06-24T13:35:57Z" name="Add customer test" finished-at="2022-06-24T13:35:58Z" duration-ms="1110">
+      <class name="com.apoorv.testcases.AddCustomerTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@14028087]" started-at="2022-06-24T13:35:53Z" name="setUp" finished-at="2022-06-24T13:35:57Z" duration-ms="3203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@14028087]" started-at="2022-06-24T13:35:58Z" name="addCustomer" data-provider="getData" finished-at="2022-06-24T13:35:58Z" duration-ms="446" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Raman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aruna]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[A234d]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Customer added successfully]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Customer addedd successfully]]>
+            </line>
+            <line>
+              <![CDATA[Login successfully executed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@14028087]" started-at="2022-06-24T13:35:58Z" name="TearDown" finished-at="2022-06-24T13:36:01Z" duration-ms="3201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
+    </test> <!-- Add customer test -->
+  </suite> <!-- Data driver farmework -->
+</testng-results>

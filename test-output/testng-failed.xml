@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Data driver farmework]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Add customer test(failed)">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.apoorv.listeners.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" name="Login test(failed)">
     <classes>
-      <class name="com.apoorv.testcases.AddCustomerTest">
+      <class name="com.apoorv.testcases.BankManagerLoginTest">
         <methods>
           <include name="TearDown"/>
           <include name="setUp"/>
-          <include name="addCustomer" invocation-numbers="0"/>
+          <include name="loginAsBankManager"/>
         </methods>
-      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
+      </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
     </classes>
-  </test> <!-- Add customer test(failed) -->
+  </test> <!-- Login test(failed) -->
 </suite> <!-- Failed suite [Data driver farmework] -->
