@@ -1,4 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.476 sec - in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.809 sec <<< FAILURE! - in TestSuite
+loginAsBankManager(com.apoorv.testcases.BankManagerLoginTest)  Time elapsed: 0.724 sec  <<< FAILURE!
+java.lang.AssertionError: login not successful
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:16)
+

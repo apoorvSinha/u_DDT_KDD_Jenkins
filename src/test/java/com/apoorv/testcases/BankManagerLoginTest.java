@@ -13,7 +13,7 @@ public class BankManagerLoginTest extends TestBase {
 	public void loginAsBankManager() {
 		driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
 		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("AddCustomer"))));
-//		Assert.fail("login not successful");
+		Assert.fail("login not successful");
 
 	}
 }

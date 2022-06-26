@@ -3,6 +3,7 @@
 	<groupId>u_DDT_KDD_Jenkins</groupId>
 	<artifactId>u_DDT_KDD_Jenkins</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -112,8 +113,6 @@
 		</dependency>
 
 		<!-- POI JARS ENDS -->
-
-
 	</dependencies>
 
 	<build>
@@ -123,6 +122,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
 				<configuration>
+
 					<testFailureIgnore> false </testFailureIgnore>
 					<suiteXmlFiles>
 						<suiteXmlFile>src/test/resources/runners/testng.xml</suiteXmlFile>
@@ -131,7 +131,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-
 	</build>
 
 

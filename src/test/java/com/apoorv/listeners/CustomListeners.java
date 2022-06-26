@@ -5,6 +5,8 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
+import com.apoorv.utilities.TestUtil;
+
 public class CustomListeners implements ITestListener{
 
 	public void onTestStart(ITestResult result) {
@@ -31,11 +33,10 @@ public class CustomListeners implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		//flag to generate HTML in report
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
-		
-		Reporter.log("Capturing screenshot");
+		TestUtil.capturePrint();
 		
 		//add thumbnail
-		Reporter.log("<a target=\"blank\" href=\"C:\\Users\\apoorv\\eclipse-workspace\\u_DDT_KDD_Jenkins\\src\\test\\resources\\pics\\shv.jpg\"><img src=\"C:\\Users\\apoorv\\eclipse-workspace\\u_DDT_KDD_Jenkins\\src\\test\\resources\\pics\\shv.jpg\" height=200 width =200></a>");
+		Reporter.log("<a target=\"blank\" href="+TestUtil.screenshotName+" ><img src="+TestUtil.screenshotName+" height=200 width =200></a>");
 	}
 
 	public void onTestSkipped(ITestResult result) {
