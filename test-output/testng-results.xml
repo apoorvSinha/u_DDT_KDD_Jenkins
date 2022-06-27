@@ -2,21 +2,21 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<a target="blank" href=errorAt2206177 050029.jpg ><img src=errorAt2206177 050029.jpg height=200 width =200></a>]]>
+      <![CDATA[Captured screenshot]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank" href=errorAt18_47_0.jpeg ><img src=errorAt18_47_0.jpeg height=1280 width =720></a>]]>
     </line>
     <line>
       <![CDATA[Customer addedd successfully]]>
     </line>
-    <line>
-      <![CDATA[Login successfully executed]]>
-    </line>
   </reporter-output>
-  <suite started-at="2022-06-26T11:30:29Z" name="Data driver farmework" finished-at="2022-06-26T11:30:31Z" duration-ms="1623">
+  <suite started-at="2022-06-27T13:17:00Z" name="Data driver farmework" finished-at="2022-06-27T13:17:02Z" duration-ms="2543">
     <groups>
     </groups>
-    <test started-at="2022-06-26T11:30:29Z" name="Login test" finished-at="2022-06-26T11:30:30Z" duration-ms="417">
+    <test started-at="2022-06-27T13:17:00Z" name="Login test" finished-at="2022-06-27T13:17:00Z" duration-ms="506">
       <class name="com.apoorv.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@6bb4dd34]" started-at="2022-06-26T11:30:29Z" name="loginAsBankManager" finished-at="2022-06-26T11:30:29Z" duration-ms="188" status="FAIL">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@6ee660fb]" started-at="2022-06-27T13:17:00Z" name="loginAsBankManager" finished-at="2022-06-27T13:17:00Z" duration-ms="208" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[login not successful]]>
@@ -55,19 +55,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[<a target="blank" href=errorAt2206177 050029.jpg ><img src=errorAt2206177 050029.jpg height=200 width =200></a>]]>
+              <![CDATA[Captured screenshot]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank" href=errorAt18_47_0.jpeg ><img src=errorAt18_47_0.jpeg height=1280 width =720></a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
     </test> <!-- Login test -->
-    <test started-at="2022-06-26T11:30:30Z" name="Add customer test" finished-at="2022-06-26T11:30:31Z" duration-ms="1182">
+    <test started-at="2022-06-27T13:17:01Z" name="Add customer test" finished-at="2022-06-27T13:17:02Z" duration-ms="1547">
       <class name="com.apoorv.testcases.AddCustomerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@33f676f6]" started-at="2022-06-26T11:30:27Z" name="setUp" finished-at="2022-06-26T11:30:29Z" duration-ms="2083" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@42463763]" started-at="2022-06-27T13:16:57Z" name="setUp" finished-at="2022-06-27T13:17:00Z" duration-ms="2769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@33f676f6]" started-at="2022-06-26T11:30:30Z" name="addCustomer" data-provider="getData" finished-at="2022-06-26T11:30:31Z" duration-ms="699" status="PASS">
+        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@42463763]" started-at="2022-06-27T13:17:01Z" name="addCustomer" data-provider="getData" finished-at="2022-06-27T13:17:02Z" duration-ms="826" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,12 +97,9 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Customer addedd successfully]]>
             </line>
-            <line>
-              <![CDATA[Login successfully executed]]>
-            </line>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@33f676f6]" started-at="2022-06-26T11:30:31Z" name="TearDown" finished-at="2022-06-26T11:30:34Z" duration-ms="3273" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@42463763]" started-at="2022-06-27T13:17:02Z" name="TearDown" finished-at="2022-06-27T13:17:06Z" duration-ms="3247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

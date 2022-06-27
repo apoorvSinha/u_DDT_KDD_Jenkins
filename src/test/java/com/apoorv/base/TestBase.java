@@ -3,12 +3,10 @@ package com.apoorv.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.logging.log4j.core.config.Loggers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +17,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.apoorv.utilities.ExcelReader;
+import com.apoorv.utilities.ExtentManager;
 
 public class TestBase {
 	/*
@@ -40,6 +39,7 @@ public class TestBase {
 	public static FileInputStream fis;
 	public static ExcelReader excel ;
 	public static WebDriverWait wait;
+	public static ExtentManager extent;
 	
 	@BeforeSuite
 	public void setUp() {
@@ -88,6 +88,8 @@ public class TestBase {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
 			wait = new WebDriverWait(driver, 5);
+			
+
 		}
 	}
 	
@@ -106,5 +108,6 @@ public class TestBase {
 			Thread.sleep(3000);
 			driver.quit();
 		}
+		
 	}
 }
