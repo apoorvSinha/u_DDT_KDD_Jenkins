@@ -5,6 +5,7 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     <listener class-name="com.apoorv.listeners.CustomListeners"/>
+    <listener class-name="com.apoorv.listeners.ExtentListeners"/>
   </listeners>
   <test thread-count="5" name="Login test(failed)" verbose="0">
     <classes>

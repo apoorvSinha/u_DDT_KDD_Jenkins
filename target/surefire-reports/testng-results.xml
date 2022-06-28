@@ -2,23 +2,30 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
+      <![CDATA[Captured screenshot]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank" href=errorAt17_31_38.jpeg ><img src=errorAt17_31_38.jpeg height=1280 width =720></a>]]>
+    </line>
+    <line>
       <![CDATA[Customer addedd successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-06-27T10:37:23Z" name="Data driver farmework" finished-at="2022-06-27T10:37:25Z" duration-ms="2622">
+  <suite started-at="2022-06-28T12:01:38Z" name="Data driver farmework" finished-at="2022-06-28T12:01:40Z" duration-ms="2093">
     <groups>
     </groups>
-    <test started-at="2022-06-27T10:37:23Z" name="Login test" finished-at="2022-06-27T10:37:23Z" duration-ms="974">
+    <test started-at="2022-06-28T12:01:38Z" name="Login test" finished-at="2022-06-28T12:01:38Z" duration-ms="356">
       <class name="com.apoorv.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@5f20155b]" started-at="2022-06-27T10:37:23Z" name="loginAsBankManager" finished-at="2022-06-27T10:37:23Z" duration-ms="587" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@740d2e78]" started-at="2022-06-28T12:01:38Z" name="loginAsBankManager" finished-at="2022-06-28T12:01:38Z" duration-ms="108" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[login not successful]]>
+              <![CDATA[Cannot find elements when the selector is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: login not successful
-at org.testng.Assert.fail(Assert.java:96)
-at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:16)
+              <![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the selector is null
+at org.openqa.selenium.By$ByCssSelector.<init>(By.java:422)
+at org.openqa.selenium.By.cssSelector(By.java:116)
+at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:17)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -49,19 +56,25 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
+            <line>
+              <![CDATA[Captured screenshot]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank" href=errorAt17_31_38.jpeg ><img src=errorAt17_31_38.jpeg height=1280 width =720></a>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
     </test> <!-- Login test -->
-    <test started-at="2022-06-27T10:37:24Z" name="Add customer test" finished-at="2022-06-27T10:37:25Z" duration-ms="1616">
+    <test started-at="2022-06-28T12:01:39Z" name="Add customer test" finished-at="2022-06-28T12:01:40Z" duration-ms="1337">
       <class name="com.apoorv.testcases.AddCustomerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@6736fa8d]" started-at="2022-06-27T10:37:20Z" name="setUp" finished-at="2022-06-27T10:37:23Z" duration-ms="2544" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@344f4dea]" started-at="2022-06-28T12:01:36Z" name="setUp" finished-at="2022-06-28T12:01:38Z" duration-ms="1823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@6736fa8d]" started-at="2022-06-27T10:37:24Z" name="addCustomer" data-provider="getData" finished-at="2022-06-27T10:37:25Z" duration-ms="863" status="PASS">
+        <test-method signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@344f4dea]" started-at="2022-06-28T12:01:39Z" name="addCustomer" data-provider="getData" finished-at="2022-06-28T12:01:40Z" duration-ms="744" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,7 +103,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
             </line>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@6736fa8d]" started-at="2022-06-27T10:37:25Z" name="TearDown" finished-at="2022-06-27T10:37:28Z" duration-ms="3252" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@344f4dea]" started-at="2022-06-28T12:01:40Z" name="TearDown" finished-at="2022-06-28T12:01:43Z" duration-ms="3274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

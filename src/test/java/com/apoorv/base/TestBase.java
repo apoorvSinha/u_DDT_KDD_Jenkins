@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeSuite;
 import com.apoorv.utilities.ExcelReader;
 import com.apoorv.utilities.ExtentManager;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 public class TestBase {
 	/*
@@ -85,12 +86,32 @@ public class TestBase {
 	}
 
 	public void click(String locator) {
-		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
-		
+
+		if (locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+
+		} else if (locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath(OR.getProperty(locator))).click();
+
+		} else if (locator.endsWith("_ID")) {
+			driver.findElement(By.id(OR.getProperty(locator))).click();
+
+		}
+
+		test.log(Status.INFO, "Clicking on: " + locator);
 	}
 
 	public void type(String locator, String value) {
-		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		if (locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		}else if(locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(value);
+		}else if(locator.endsWith("_ID")) {
+			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
+		}
+		
+
+		test.log(Status.INFO, "Typing in: " + locator + " entered value is: " + value);
 	}
 
 	public Boolean isElementPresent(By by) {

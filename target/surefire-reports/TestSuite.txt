@@ -1,9 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.186 sec <<< FAILURE! - in TestSuite
-loginAsBankManager(com.apoorv.testcases.BankManagerLoginTest)  Time elapsed: 0.599 sec  <<< FAILURE!
-java.lang.AssertionError: login not successful
-	at org.testng.Assert.fail(Assert.java:96)
-	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:16)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.538 sec <<< FAILURE! - in TestSuite
+loginAsBankManager(com.apoorv.testcases.BankManagerLoginTest)  Time elapsed: 0.345 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: Cannot find elements when the selector is null
+	at org.openqa.selenium.By$ByCssSelector.<init>(By.java:422)
+	at org.openqa.selenium.By.cssSelector(By.java:116)
+	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:17)
 

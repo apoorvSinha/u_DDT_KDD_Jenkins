@@ -15,12 +15,18 @@ public class AddCustomerTest extends TestBase {
 
 	@Test(dataProvider = "getData")
 	public void addCustomer(String firstName, String lastName, String postCode, String alertText) {
-		driver.findElement(By.cssSelector(OR.getProperty("AddCustomer"))).click();
-		driver.findElement(By.cssSelector(OR.getProperty("EnterFirstName"))).sendKeys(firstName);
-		driver.findElement(By.cssSelector(OR.getProperty("EnterLastName"))).sendKeys(lastName);
-		driver.findElement(By.cssSelector(OR.getProperty("EnterPostalCode"))).sendKeys(postCode);
-		driver.findElement(By.cssSelector(OR.getProperty("AddCustomerAfterData"))).click();
-		;
+//		driver.findElement(By.cssSelector(OR.getProperty("AddCustomer"))).click();
+//		driver.findElement(By.cssSelector(OR.getProperty("EnterFirstName"))).sendKeys(firstName);
+//		driver.findElement(By.cssSelector(OR.getProperty("EnterLastName"))).sendKeys(lastName);
+//		driver.findElement(By.cssSelector(OR.getProperty("EnterPostalCode"))).sendKeys(postCode);
+//		driver.findElement(By.cssSelector(OR.getProperty("AddCustomerAfterData"))).click();
+		
+		click("AddCustomer_CSS");
+		type("EnterFirstName_CSS", firstName);
+		type("EnterLastName_XPATH", lastName);
+		type("EnterPostalCode_CSS", postCode);
+		click("AddCustomerAfterData_CSS");
+		
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alert.getText().contains(alertText));
 		alert.accept();
