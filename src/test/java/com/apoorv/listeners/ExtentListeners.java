@@ -7,6 +7,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.apoorv.base.TestBase;
 import com.apoorv.utilities.ExtentManager;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -19,13 +20,13 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 
 
-public class ExtentListeners implements ITestListener {
+public class ExtentListeners extends TestBase implements ITestListener {
 
 	static Date d = new Date();
 	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
 
 	private static ExtentReports extent = ExtentManager.createInstance(".//reports/"+fileName);
-	public static ExtentTest test;
+	
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
 	
 

@@ -18,34 +18,27 @@ import org.testng.annotations.BeforeSuite;
 
 import com.apoorv.utilities.ExcelReader;
 import com.apoorv.utilities.ExtentManager;
+import com.aventstack.extentreports.ExtentTest;
 
 public class TestBase {
 	/*
-	 * WebDriver
-	 * Properties
-	 * Logs- log4j jar, .logs (application and selenium), log4j property
-	 * Extent reports
-	 * DB
-	 * Excel
-	 * Mail
-	 * Reportng
-	 * Extent reports
-	 * Jenkins
-	 * */
-	
+	 * WebDriver Properties Logs- log4j jar, .logs (application and selenium), log4j
+	 * property Extent reports DB Excel Mail Reportng Extent reports Jenkins
+	 */
+
 	public static WebDriver driver;
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
-	public static ExcelReader excel ;
+	public static ExcelReader excel;
 	public static WebDriverWait wait;
 	public static ExtentManager extent;
-	
-	
+	public static ExtentTest test;
+
 	@BeforeSuite
 	public void setUp() {
-		if(driver==null) {
-			//load configurations
+		if (driver == null) {
+			// load configurations
 			try {
 				fis = new FileInputStream(".//src/test/resources/properties/config.propeties");
 			} catch (FileNotFoundException e) {
@@ -56,8 +49,8 @@ public class TestBase {
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
-			
-			//load Object repository
+
+			// load Object repository
 			try {
 				fis = new FileInputStream(".//src/test/resources/properties/OR.properties");
 			} catch (FileNotFoundException e) {
@@ -68,54 +61,53 @@ public class TestBase {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			
-			
-			//choosing browser
-			if(config.getProperty("browser").equals("chrome")){
+
+			// choosing browser
+			if (config.getProperty("browser").equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver", ".//src/test/resources/executables/chromedriver.exe");
 				driver = new ChromeDriver();
-			}
-			else if(config.getProperty("browser").equals("edge")){
+			} else if (config.getProperty("browser").equals("edge")) {
 				System.getProperty("webdriver.edge.driver", ".//src/test/resources/executables/msedgedriver.exe");
 				driver = new EdgeDriver();
-			}
-			else if(config.getProperty("browser").equals("firefox")) {
+			} else if (config.getProperty("browser").equals("firefox")) {
 				System.getProperty("webdriver.gecko.driver", ".//src/test/resources/executables/geckodriver.exe");
 				driver = new FirefoxDriver();
 			}
-			
-			//managing window and timeouts
+
+			// managing window and timeouts
 			driver.get(config.getProperty("testsiteurl"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
+					TimeUnit.SECONDS);
 			wait = new WebDriverWait(driver, 5);
 
 		}
 	}
-	
+
 	public void click(String locator) {
 		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
-			}
-	
+		
+	}
+
 	public void type(String locator, String value) {
 		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
 	}
-	
+
 	public Boolean isElementPresent(By by) {
 		try {
 			driver.findElement(by);
 			return true;
-		}catch(NoSuchElementException e) {
+		} catch (NoSuchElementException e) {
 			return false;
 		}
 	}
-	
+
 	@AfterSuite
 	public void TearDown() throws InterruptedException {
-		if(driver!=null) {
+		if (driver != null) {
 			Thread.sleep(3000);
 			driver.quit();
 		}
-		
+
 	}
 }
