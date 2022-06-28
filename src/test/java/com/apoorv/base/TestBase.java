@@ -41,6 +41,7 @@ public class TestBase {
 	public static WebDriverWait wait;
 	public static ExtentManager extent;
 	
+	
 	@BeforeSuite
 	public void setUp() {
 		if(driver==null) {
@@ -88,9 +89,16 @@ public class TestBase {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")), TimeUnit.SECONDS);
 			wait = new WebDriverWait(driver, 5);
-			
 
 		}
+	}
+	
+	public void click(String locator) {
+		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+			}
+	
+	public void type(String locator, String value) {
+		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
 	}
 	
 	public Boolean isElementPresent(By by) {
