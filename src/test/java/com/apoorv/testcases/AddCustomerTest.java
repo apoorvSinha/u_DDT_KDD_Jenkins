@@ -10,16 +10,12 @@ import org.testng.annotations.Test;
 
 import com.apoorv.base.TestBase;
 import com.apoorv.utilities.ExcelReader;
+import com.apoorv.utilities.TestUtil;
 
 public class AddCustomerTest extends TestBase {
 
-	@Test(dataProvider = "getData")
-	public void addCustomer(String firstName, String lastName, String postCode, String alertText) {
-//		driver.findElement(By.cssSelector(OR.getProperty("AddCustomer"))).click();
-//		driver.findElement(By.cssSelector(OR.getProperty("EnterFirstName"))).sendKeys(firstName);
-//		driver.findElement(By.cssSelector(OR.getProperty("EnterLastName"))).sendKeys(lastName);
-//		driver.findElement(By.cssSelector(OR.getProperty("EnterPostalCode"))).sendKeys(postCode);
-//		driver.findElement(By.cssSelector(OR.getProperty("AddCustomerAfterData"))).click();
+	@Test(dataProviderClass = TestUtil.class, dataProvider="dp")
+	public void addCustomerTest(String firstName, String lastName, String postCode, String alertText) {
 		
 		click("AddCustomer_CSS");
 		type("EnterFirstName_CSS", firstName);
@@ -30,22 +26,6 @@ public class AddCustomerTest extends TestBase {
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alert.getText().contains(alertText));
 		alert.accept();
-		Reporter.log("Customer addedd successfully");
 	}
 
-	@DataProvider
-	public Object[][] getData() {
-		excel = new ExcelReader("./src/test/resources/excel/testdata.XLSX");
-		String sheetName = "AddCustomerTest";
-		int rows = excel.getRowCount(sheetName);
-		int cols = excel.getColumnCount(sheetName);
-		Object[][] data = new Object[rows - 1][cols];
-
-		for (int rowNum = 2; rowNum <= rows; rowNum++) {
-			for (int colNum = 0; colNum < cols; colNum++) {
-				data[rowNum - 2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
-			}
-		}
-		return data;
-	}
 }

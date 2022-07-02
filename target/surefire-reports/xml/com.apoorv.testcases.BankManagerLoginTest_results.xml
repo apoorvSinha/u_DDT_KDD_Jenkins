@@ -4,15 +4,14 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.108">
+           time="0.236">
   <properties />
-            <testcase name="loginAsBankManager" time="0.108" classname="com.apoorv.testcases.BankManagerLoginTest">
-                <failure type="java.lang.IllegalArgumentException"
-                  message="Cannot find elements when the selector is null"
+            <testcase name="loginAsBankManager" time="0.236" classname="com.apoorv.testcases.BankManagerLoginTest">
+                <failure type="java.lang.AssertionError"
+                  message="login not successful"
               >
-<![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the selector is null
-  org.openqa.selenium.By$ByCssSelector.<init>(By.java:422)
-  org.openqa.selenium.By.cssSelector(By.java:116)
+<![CDATA[java.lang.AssertionError: login not successful
+  org.testng.Assert.fail(Assert.java:96)
   com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:17)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)

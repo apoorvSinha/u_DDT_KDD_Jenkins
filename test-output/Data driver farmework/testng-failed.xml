@@ -18,4 +18,15 @@
       </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
     </classes>
   </test> <!-- Login test(failed) -->
+  <test thread-count="5" name="Add customer test(failed)">
+    <classes>
+      <class name="com.apoorv.testcases.AddCustomerTest">
+        <methods>
+          <include name="TearDown"/>
+          <include name="setUp"/>
+          <include name="addCustomerTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
+    </classes>
+  </test> <!-- Add customer test(failed) -->
 </suite> <!-- Failed suite [Data driver farmework] -->

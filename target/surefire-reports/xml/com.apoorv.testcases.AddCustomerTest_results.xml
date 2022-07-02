@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.744">
+           time="0.546">
   <properties />
   
   
-            <testcase name="addCustomer" time="0.744" classname="com.apoorv.testcases.AddCustomerTest" />
+            <testcase name="addCustomerTest" time="0.546" classname="com.apoorv.testcases.AddCustomerTest" />
       
 </testsuite>
