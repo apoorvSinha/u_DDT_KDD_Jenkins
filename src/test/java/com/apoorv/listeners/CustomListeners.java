@@ -4,6 +4,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 
 import com.apoorv.base.TestBase;
 import com.apoorv.utilities.TestUtil;
@@ -12,6 +13,10 @@ public class CustomListeners  extends TestBase implements ITestListener{
 
 	public void onTestStart(ITestResult result) {
 		
+		//running test cases with excel  data
+//		if(!TestUtil.isTestRunnable(result.getName(), excel)) {
+//			throw new SkipException("Skipping the test as run mode is no");
+//		}
 	}
 
 	public void onTestSuccess(ITestResult result) {

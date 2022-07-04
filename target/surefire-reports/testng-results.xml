@@ -2,20 +2,44 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-04T14:33:11Z" name="Data driver farmework" finished-at="2022-07-04T14:33:26Z" duration-ms="15133">
+  <suite started-at="2022-07-04T15:15:29Z" name="Test cases" finished-at="2022-07-04T15:15:45Z" duration-ms="15474">
     <groups>
     </groups>
-    <test started-at="2022-07-04T14:33:11Z" name="Login test" finished-at="2022-07-04T14:33:12Z" duration-ms="229">
+    <test started-at="2022-07-04T15:15:29Z" name="Login Test" finished-at="2022-07-04T15:15:29Z" duration-ms="277">
       <class name="com.apoorv.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@4ed5eb72]" started-at="2022-07-04T14:33:11Z" name="loginAsBankManager" finished-at="2022-07-04T14:33:12Z" duration-ms="174" status="PASS">
+        <test-method signature="bankManagerLoginTest()[pri:0, instance:com.apoorv.testcases.BankManagerLoginTest@72437d8d]" started-at="2022-07-04T15:15:29Z" name="bankManagerLoginTest" finished-at="2022-07-04T15:15:29Z" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAsBankManager -->
+        </test-method> <!-- bankManagerLoginTest -->
       </class> <!-- com.apoorv.testcases.BankManagerLoginTest -->
-    </test> <!-- Login test -->
-    <test started-at="2022-07-04T14:33:12Z" name="Add customer test" finished-at="2022-07-04T14:33:26Z" duration-ms="13800">
+    </test> <!-- Login Test -->
+    <test started-at="2022-07-04T15:15:30Z" name="Open account Test" finished-at="2022-07-04T15:15:31Z" duration-ms="1257">
+      <class name="com.apoorv.testcases.OpenAccountTest">
+        <test-method signature="openAccountTest(java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.OpenAccountTest@7dda48d9]" started-at="2022-07-04T15:15:31Z" name="openAccountTest" data-provider="dp" finished-at="2022-07-04T15:15:31Z" duration-ms="477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ron Weasly ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dollar ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAccountTest -->
+      </class> <!-- com.apoorv.testcases.OpenAccountTest -->
+    </test> <!-- Open account Test -->
+    <test started-at="2022-07-04T15:15:31Z" name="Add customer Test" finished-at="2022-07-04T15:15:45Z" duration-ms="13516">
       <class name="com.apoorv.testcases.AddCustomerTest">
-        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@4ce1d6d0]" started-at="2022-07-04T14:33:12Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T14:33:16Z" duration-ms="3440" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@53de625d]" started-at="2022-07-04T15:15:27Z" name="setUp" finished-at="2022-07-04T15:15:29Z" duration-ms="2529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@53de625d]" started-at="2022-07-04T15:15:31Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T15:15:35Z" duration-ms="3688" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,7 +65,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@4ce1d6d0]" started-at="2022-07-04T14:33:16Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T14:33:19Z" duration-ms="3225" status="PASS">
+        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@53de625d]" started-at="2022-07-04T15:15:35Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T15:15:38Z" duration-ms="3263" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,7 +91,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@4ce1d6d0]" started-at="2022-07-04T14:33:19Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T14:33:22Z" duration-ms="3228" status="PASS">
+        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@53de625d]" started-at="2022-07-04T15:15:38Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T15:15:41Z" duration-ms="3230" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -93,7 +117,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@4ce1d6d0]" started-at="2022-07-04T14:33:22Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T14:33:26Z" duration-ms="3328" status="PASS">
+        <test-method signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.AddCustomerTest@53de625d]" started-at="2022-07-04T15:15:41Z" name="addCustomerTest" data-provider="dp" finished-at="2022-07-04T15:15:45Z" duration-ms="3242" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,35 +143,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
-    </test> <!-- Add customer test -->
-    <test started-at="2022-07-04T14:33:26Z" name="open account test" finished-at="2022-07-04T14:33:26Z" duration-ms="721">
-      <class name="com.apoorv.testcases.OpenAccountTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.apoorv.testcases.OpenAccountTest@7ca20101]" started-at="2022-07-04T14:33:09Z" name="setUp" finished-at="2022-07-04T14:33:11Z" duration-ms="2334" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="openAccountTest(java.lang.String, java.lang.String)[pri:0, instance:com.apoorv.testcases.OpenAccountTest@7ca20101]" started-at="2022-07-04T14:33:26Z" name="openAccountTest" data-provider="dp" finished-at="2022-07-04T14:33:26Z" duration-ms="680" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Ron Weasly ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Dollar ]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openAccountTest -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.OpenAccountTest@7ca20101]" started-at="2022-07-04T14:33:26Z" name="TearDown" finished-at="2022-07-04T14:33:30Z" duration-ms="3366" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:com.apoorv.testcases.AddCustomerTest@53de625d]" started-at="2022-07-04T15:15:45Z" name="TearDown" finished-at="2022-07-04T15:15:48Z" duration-ms="3247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- com.apoorv.testcases.OpenAccountTest -->
-    </test> <!-- open account test -->
-  </suite> <!-- Data driver farmework -->
+      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
+    </test> <!-- Add customer Test -->
+  </suite> <!-- Test cases -->
 </testng-results>

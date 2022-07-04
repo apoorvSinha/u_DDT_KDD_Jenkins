@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Add customer test"
+<testsuite name="Add customer Test"
            tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="13.221">
+           time="13.423">
   <properties />
   
   
-            <testcase name="addCustomerTest" time="3.440" classname="com.apoorv.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="3.225" classname="com.apoorv.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="3.228" classname="com.apoorv.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="3.328" classname="com.apoorv.testcases.AddCustomerTest" />
+            <testcase name="addCustomerTest" time="3.230" classname="com.apoorv.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="3.263" classname="com.apoorv.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="3.688" classname="com.apoorv.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="3.242" classname="com.apoorv.testcases.AddCustomerTest" />
       
 </testsuite>

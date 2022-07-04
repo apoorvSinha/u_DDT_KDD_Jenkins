@@ -11,7 +11,7 @@ import com.apoorv.base.TestBase;
 public class BankManagerLoginTest extends TestBase {
 
 	@Test
-	public void loginAsBankManager() {
+	public void bankManagerLoginTest() {
 		//verifyEquals("abc", "xyz");
 		click("bmlBtn_CSS");
 		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("AddCustomer_CSS"))));
