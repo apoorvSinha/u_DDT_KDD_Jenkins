@@ -9,17 +9,23 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.apoorv.utilities.ExcelReader;
 import com.apoorv.utilities.ExtentManager;
+import com.apoorv.utilities.TestUtil;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.Markup;
 
 public class TestBase {
 	/*
@@ -104,14 +110,29 @@ public class TestBase {
 	public void type(String locator, String value) {
 		if (locator.endsWith("_CSS")) {
 			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
-		}else if(locator.endsWith("_XPATH")) {
+		} else if (locator.endsWith("_XPATH")) {
 			driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(value);
-		}else if(locator.endsWith("_ID")) {
+		} else if (locator.endsWith("_ID")) {
 			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
 		}
-		
 
 		test.log(Status.INFO, "Typing in: " + locator + " entered value is: " + value);
+	}
+
+	static WebElement dropDown;
+
+	public void select(String locator, String value) {
+		if (locator.endsWith("_CSS")) {
+			dropDown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
+		} else if (locator.endsWith("_XPATH")) {
+			dropDown = driver.findElement(By.xpath(OR.getProperty(locator)));
+		} else if (locator.endsWith("_ID")) {
+			dropDown = driver.findElement(By.id(OR.getProperty(locator)));
+		}
+		Select selected = new Select(dropDown);
+		selected.selectByVisibleText(value);
+
+		test.log(Status.INFO, "Selecting from dropdown: " + locator + " value as: " + value);
 	}
 
 	public Boolean isElementPresent(By by) {
@@ -120,6 +141,23 @@ public class TestBase {
 			return true;
 		} catch (NoSuchElementException e) {
 			return false;
+		}
+	}
+
+	public static void verifyEquals(String expecetd, String actual) {
+		try {
+			Assert.assertEquals(actual, expecetd);
+		} catch (Throwable t) {
+			TestUtil.capturePrint();
+
+			// Reportng
+			Reporter.log("<br>" + "Verification failure: " + t.getMessage() + "<br>");
+			Reporter.log("<a target=\"_blank\" href=" + TestUtil.screenshotName + " ><img src="
+					+ TestUtil.screenshotName + " height=1280 width =720></a>");
+			// extent
+			test.log(Status.FAIL, "Verification failure: " + t.getMessage());
+			test.log(Status.FAIL, (Markup) test.addScreenCaptureFromPath(TestUtil.screenshotName));
+
 		}
 	}
 

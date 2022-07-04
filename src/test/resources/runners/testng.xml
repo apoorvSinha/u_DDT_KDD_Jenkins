@@ -1,23 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Data driver farmework">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite1" verbose="1" >
 
-<listeners>
-	<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
-	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
-	<listener class-name="com.apoorv.listeners.CustomListeners"></listener>
-	<listener class-name="com.apoorv.listeners.ExtentListeners"></listener>
-</listeners>
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
+		<listener class-name="com.apoorv.listeners.CustomListeners"></listener>
+		<listener class-name="com.apoorv.listeners.ExtentListeners"></listener>
+	</listeners>
 
 	<test thread-count="5" name="Login test">
 		<classes>
 			<class name="com.apoorv.testcases.BankManagerLoginTest" />
 		</classes>
-	</test>  
-	
+	</test>
+
 	<test thread-count="5" name="Add customer test">
 		<classes>
 			<class name="com.apoorv.testcases.AddCustomerTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test> Test<!--  -->
+
+	<test thread-count="5" name="open account test">
+		<classes>
+			<class name="com.apoorv.testcases.OpenAccountTest" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

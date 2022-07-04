@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Login test"
+<testsuite name="open account test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.174">
+           time="0.680">
   <properties />
   
   
-            <testcase name="loginAsBankManager" time="0.174" classname="com.apoorv.testcases.BankManagerLoginTest" />
+            <testcase name="openAccountTest" time="0.680" classname="com.apoorv.testcases.OpenAccountTest" />
       
 </testsuite>
