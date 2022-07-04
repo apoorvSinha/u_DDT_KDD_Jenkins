@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 28 19:34:06 IST 2022</td>
+<td>Started on:</td><td>Mon Jul 04 11:09:59 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (434 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (450 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,20 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager()'><b>loginAsBankManager</b><br>Test class: com.apoorv.testcases.BankManagerLoginTest<br/>
-<a href="#Output-123674777" onClick='toggleBox("Output-123674777", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-385784873" onClick='toggleBox("Output-385784873", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-123674777" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-123674777">
+<a href="#Output-385784873" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-385784873">
 Captured screenshot<br/>
-<a target="_blank" href=errorAt19_34_6.jpeg ><img src=errorAt19_34_6.jpeg height=1280 width =720></a><br/>
+<a target="_blank" href=errorAt11_9_59.jpeg ><img src=errorAt11_9_59.jpeg height=1280 width =720></a><br/>
 </div>
 </td>
-<td><div><pre>java.lang.IllegalArgumentException: Cannot find elements when the selector is null
-	at org.openqa.selenium.By$ByCssSelector.&lt;init&gt;(By.java:422)
-	at org.openqa.selenium.By.cssSelector(By.java:116)
-	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:16)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace123674777", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace123674777'><pre>java.lang.IllegalArgumentException: Cannot find elements when the selector is null
-	at org.openqa.selenium.By$ByCssSelector.&lt;init&gt;(By.java:422)
-	at org.openqa.selenium.By.cssSelector(By.java:116)
-	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:16)
+<td><div><pre>java.lang.AssertionError: login not successful
+	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:17)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace385784873", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace385784873'><pre>java.lang.AssertionError: login not successful
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

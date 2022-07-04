@@ -12,7 +12,7 @@
 <body>
 <h1>Login test</h1>
 <p>
-  Test duration: 0.149s
+  Test duration: 0.226s
 </p>
 
 
@@ -28,22 +28,21 @@
                   loginAsBankManager
       </td>
   <td class="duration">
-    0.149s
+    0.226s
   </td>
   <td class="result">
         
     
             <div class="testOutput">
                         Captured screenshot
-                                <a target="_blank" href=errorAt19_34_6.jpeg ><img src=errorAt19_34_6.jpeg height=1280 width =720></a>
+                                <a target="_blank" href=errorAt11_9_59.jpeg ><img src=errorAt11_9_59.jpeg height=1280 width =720></a>
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalArgumentException: Cannot find elements when the selector is null</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: login not successful</b></a><br />
     <div class="stackTrace" id="exception-0">
-              org.openqa.selenium.By$ByCssSelector.&lt;init&gt;(By.java:422)<br />
-              org.openqa.selenium.By.cssSelector(By.java:116)<br />
-              com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:16)<br />
+              org.testng.Assert.fail(Assert.java:96)<br />
+              com.apoorv.testcases.BankManagerLoginTest.loginAsBankManager(BankManagerLoginTest.java:17)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
