@@ -6,6 +6,7 @@ import java.util.Date;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.SkipException;
 
 import com.apoorv.base.TestBase;
 import com.apoorv.utilities.ExtentManager;
@@ -17,8 +18,6 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-
-
 
 
 
@@ -38,6 +37,10 @@ public class ExtentListeners extends TestBase implements ITestListener {
 		test = extent.createTest(result.getTestClass().getName()+"     @TestCase : "+result.getMethod().getMethodName());
         testReport.set(test);
         
+        //run modes
+        if(!TestUtil.isTestRunnable(result.getName(), excel)) {
+        	throw new SkipException("Skipping the test"+result.getName().toUpperCase() +" as the run mode is no");
+        }
 
 	}
 
