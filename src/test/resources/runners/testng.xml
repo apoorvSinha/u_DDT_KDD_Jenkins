@@ -17,5 +17,10 @@
 			<class name="com.apoorv.testcases.OpenAccountTest" />
 		</classes>
 	</test> <!-- Test -->
+	<test thread-count="5" name="Add customer Test">
+		<classes>
+			<class name="com.apoorv.testcases.AddCustomerTest" />
+		</classes>
+	</test> <!-- Test -->
 
 </suite> <!-- Suite -->

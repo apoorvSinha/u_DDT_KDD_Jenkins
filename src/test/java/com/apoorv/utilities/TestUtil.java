@@ -33,7 +33,6 @@ public class TestUtil extends TestBase {
 
 	@DataProvider(name = "dp")
 	public Object[][] getData(Method m) {
-		excel = new ExcelReader("./src/test/resources/excel/testdata.XLSX");
 		String sheetName = m.getName();
 		int rows = excel.getRowCount(sheetName);
 		int cols = excel.getColumnCount(sheetName);
@@ -48,7 +47,6 @@ public class TestUtil extends TestBase {
 	}
 
 	public static boolean isTestRunnable(String testName, ExcelReader excel) {
-		excel = new ExcelReader("./src/test/resources/excel/testdata.XLSX");
 		String sheetName = "test_suite";
 		int rows = excel.getRowCount(sheetName);
 		for (int rnum = 2; rnum < rows; rnum++) {

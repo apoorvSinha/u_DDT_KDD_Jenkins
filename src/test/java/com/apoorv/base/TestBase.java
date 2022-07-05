@@ -37,7 +37,7 @@ public class TestBase {
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
-	public static ExcelReader excel;
+	public static ExcelReader excel = new ExcelReader("./src/test/resources/excel/testdata.XLSX");
 	public static WebDriverWait wait;
 	public static ExtentManager extent;
 	public static ExtentTest test;

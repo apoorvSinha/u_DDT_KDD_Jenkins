@@ -85,7 +85,8 @@ public class ExtentListeners extends TestBase implements ITestListener {
 		String logText="<b>"+"Test Case:- "+ methodName+ " Skipped"+"</b>";		
 		Markup m=MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		testReport.get().skip(m);
-
+		
+		test.log(Status.SKIP, result.getName().toUpperCase()+" Skipped the test as run mode is no");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
