@@ -27,6 +27,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.Markup;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 	/*
 	 * WebDriver Properties Logs- log4j jar, .logs (application and selenium), log4j
@@ -41,6 +43,7 @@ public class TestBase {
 	public static WebDriverWait wait;
 	public static ExtentManager extent;
 	public static ExtentTest test;
+	public static String browser;
 
 	@BeforeSuite
 	public void setUp() {
@@ -68,13 +71,24 @@ public class TestBase {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			
+			//jenkins setup browser
+			if(System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+				browser = System.getenv("browser");
+			}
+			else {
+				browser = config.getProperty("browser");
+			}
+			//if browser value comes from pipeline
+			config.setProperty("browser", browser);
 
 			// choosing browser
 			if (config.getProperty("browser").equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver", ".//src/test/resources/executables/chromedriver.exe");
 				driver = new ChromeDriver();
 			} else if (config.getProperty("browser").equals("edge")) {
-				System.getProperty("webdriver.edge.driver", ".//src/test/resources/executables/msedgedriver.exe");
+				//System.getProperty("webdriver.edge.driver", ".//src/test/resources/executables/msedgedriver.exe");
+				WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();
 			} else if (config.getProperty("browser").equals("firefox")) {
 				System.getProperty("webdriver.gecko.driver", ".//src/test/resources/executables/geckodriver.exe");

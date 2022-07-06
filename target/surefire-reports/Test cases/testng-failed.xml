@@ -18,4 +18,15 @@
       </class> <!-- com.apoorv.testcases.OpenAccountTest -->
     </classes>
   </test> <!-- Open account Test(failed) -->
+  <test thread-count="5" name="Add customer Test(failed)" verbose="0">
+    <classes>
+      <class name="com.apoorv.testcases.AddCustomerTest">
+        <methods>
+          <include name="TearDown"/>
+          <include name="setUp"/>
+          <include name="addCustomerTest" invocation-numbers="1 3"/>
+        </methods>
+      </class> <!-- com.apoorv.testcases.AddCustomerTest -->
+    </classes>
+  </test> <!-- Add customer Test(failed) -->
 </suite> <!-- Failed suite [Test cases] -->

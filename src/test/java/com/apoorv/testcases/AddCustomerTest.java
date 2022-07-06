@@ -3,6 +3,7 @@ package com.apoorv.testcases;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.apoorv.base.TestBase;
@@ -11,7 +12,10 @@ import com.apoorv.utilities.TestUtil;
 public class AddCustomerTest extends TestBase {
 
 	@Test(dataProviderClass = TestUtil.class, dataProvider="dp")
-	public void addCustomerTest(String firstName, String lastName, String postCode, String alertText) throws InterruptedException {
+	public void addCustomerTest(String firstName, String lastName, String postCode, String alertText, String Runmode) throws InterruptedException {
+		if(!Runmode.equalsIgnoreCase("y")) {
+			throw new SkipException("Skipping test case as test run mode is no");
+		}
 		
 		click("AddCustomer_CSS");
 		type("EnterFirstName_CSS", firstName);

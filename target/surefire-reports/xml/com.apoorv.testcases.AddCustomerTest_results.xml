@@ -3,14 +3,18 @@
            tests="4"
            failures="0"
            errors="0"
-           skipped="0"
-           time="14.027">
+           skipped="2"
+           time="1.208">
   <properties />
   
+            <testcase name="addCustomerTest" time="0.0" classname="com.apoorv.testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
+            <testcase name="addCustomerTest" time="0.0" classname="com.apoorv.testcases.AddCustomerTest">
+          <skipped />
+    </testcase>
   
-            <testcase name="addCustomerTest" time="3.377" classname="com.apoorv.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="3.379" classname="com.apoorv.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="3.928" classname="com.apoorv.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="3.343" classname="com.apoorv.testcases.AddCustomerTest" />
+            <testcase name="addCustomerTest" time="0.751" classname="com.apoorv.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="0.455" classname="com.apoorv.testcases.AddCustomerTest" />
       
 </testsuite>
